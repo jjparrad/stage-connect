@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/light"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:text=" "
+            android:textSize="32sp" />
+
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:theme="@style/dark"
+            android:background="@drawable/dark_round_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="100dp">
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="Candidates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/new_offers"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="60dp"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:text="New" />
+            <TextView
+                android:id="@+id/in_progress"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:theme="@style/dark"
+                android:layout_height="60dp"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:text="In progress" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            tools:listitem="@layout/recycler_view_candidate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

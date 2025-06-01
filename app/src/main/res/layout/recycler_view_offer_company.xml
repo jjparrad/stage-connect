@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:background="@drawable/card"
+    android:paddingVertical="15dp">
+
+    <TextView
+        android:id="@+id/position"
+        android:theme="@style/light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Position"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/city"
+        android:theme="@style/light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="City"
+        app:layout_constraintTop_toBottomOf="@+id/position"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:theme="@style/light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        app:layout_constraintTop_toBottomOf="@+id/city"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date">
+
+        <TextView
+            android:id="@+id/candidate_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N candidates"
+            android:textSize="16sp"
+            android:theme="@style/light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" candidates"
+            android:textSize="16sp"
+            android:theme="@style/light"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
